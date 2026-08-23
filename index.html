@@ -1,55 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tessera</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tessera — 2026-08-23</title>
 <style>
   :root {
-    --bg: #fbfaf8;
-    --fg: #1c1b19;
-    --muted: #6b6862;
-    --rule: #e3e0da;
+    color-scheme: light dark;
+    --bg: #fdfcfa;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #8a5a2b;
+    --divider: #e2ddd5;
+    --button-bg: #1a1a1a;
+    --button-fg: #fdfcfa;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #171614;
-      --fg: #e8e5df;
-      --muted: #918d85;
-      --rule: #2e2c28;
+      --bg: #16151a;
+      --fg: #ece9e4;
+      --muted: #a8a39a;
+      --accent: #d1a05f;
+      --divider: #33313a;
+      --button-bg: #ece9e4;
+      --button-fg: #16151a;
     }
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    padding: 4rem 1.5rem;
+    padding: 2.5rem 1.25rem 4rem;
     background: var(--bg);
     color: var(--fg);
-    font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     font-size: 18px;
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 {
-    font-size: 1.35rem;
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  header.page-head {
+    margin-bottom: 2.5rem;
+  }
+  header.page-head .date {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  header.page-head .readtime {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+  }
+  h2.section-title {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 2.8rem 0 1.4rem;
+    font-weight: 700;
+  }
+  article.item {
+    margin-bottom: 2.2rem;
+  }
+  article.item h3 {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin: 0 0 0.7rem;
+  }
+  article.item p {
+    margin: 0 0 0.7rem;
+  }
+  a.source-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    margin-top: 0.9rem;
+    background: var(--button-bg);
+    color: var(--button-fg);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
-    margin: 0 0 0.5rem;
+    word-break: break-all;
   }
-  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 2.5rem; }
-  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  p { margin: 0 0 1.2rem; }
-  .quiet { color: var(--muted); }
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: 2.2rem 0;
+  }
+  .question {
+    margin: 0 0 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--divider);
+  }
+  .question:last-of-type {
+    border-bottom: none;
+  }
+  .question .q-meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+  footer {
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Tessera</h1>
-  <p class="meta">Reading notes on space, material, sourcing and practice.</p>
-  <hr>
-  <p>Nothing published yet. The first brief appears here once the pipeline runs.</p>
-  <p class="quiet">Built work where the reasoning is visible. Materials you can actually specify, with the certification path attached. The craft supply chain, and the market that prices what it makes. How the work gets commissioned and what it pays.</p>
+
+  <header class="page-head">
+    <div class="date">2026-08-23</div>
+    <div class="readtime">~5 min read</div>
+  </header>
+
+  <h2 class="section-title">Today</h2>
+
+  <article class="item">
+    <h3>AICA's ルナライトCF resolves its own cert confusion — NM-5037 now folds in NM-4339.</h3>
+    <p>AICA's new CO₂-fixing calcium silicate board launches August 24 at a 設計価格 (design/list price, tax excluded) of ¥11,900 per panel, 910×2,550mm at 6mm thick. Each panel fixes roughly 300g of CO₂; AICA pegs fleet-wide use at about 340 tonnes/year, framed as 29 panels replacing one sugi tree's annual carbon uptake.</p>
+    <p>The part that actually matters for a spec sheet: AICA's own current certification list (dated April 2026) confirms 不燃認定番号 NM-5037, and that number now incorporates the older NM-4339 across the whole ルナライト family (SRK/HD/100) — worth updating any standing reference that still cites the earlier number or a stale cert-list URL.</p>
+    <a class="source-button" href="https://aica.co.jp/products/news/detail/post_297.html">Read source →</a>
+  </article>
+
+  <hr class="divider">
+
+  <article class="item">
+    <h3>Japan's fee-basis notification quietly changed in January 2024 — and a live design competition still cites the old one.</h3>
+    <p>MLIT's compensation standard for design services moved from 告示第98号 to 告示第8号 back on 2024-01-09, confirmed independently on MLIT's, JIA's and 四会連合協定's own sites — 告示98号 is now explicitly labelled the "旧業務報酬基準" (former standard).</p>
+    <p>That's not academic: NOT A HOTEL's Design Competition 2026 (deadline was January 11, 2026; results March 28) still tells entrants their design fee "will be calculated based on...Notification No. 98." Prizes there: Grand Prize ¥10,000,000 plus design fee for a built, sold property; four Excellence prizes at ¥500,000 each; five Honorable Mention/Merit prizes at ¥150,000 each; one Student Prize at ¥1,000,000. Any RFP, competition brief or fee negotiation still citing 告示98号 is citing a dead number.</p>
+    <a class="source-button" href="https://notahotel.com/en/design-competition/2026">Read source →</a>
+  </article>
+
+  <hr class="divider">
+
+  <article class="item">
+    <h3>Shinwa Auction's July sale cleared craft and print lots several multiples over estimate.</h3>
+    <p>The July 18 sale totalled ¥138,034,500 hammer (labelled 落札価額合計, hammer plus hammer's-fee only, tax status unstated) at an 82.5% clearance rate. Standout: a 1983 water jar by Raku Kichizaemon XV, estimated ¥500,000–800,000, hammered at ¥3,565,000 — four-and-a-half to seven times estimate.</p>
+    <p>A 1989 Yayoi Kusama screenprint ("百合," edition of 100), estimated ¥2,000,000–3,000,000, hammered at ¥4,255,000. Useful procurement comparators for craft and print editions alike; caveat is Shinwa's own results page is the only source found.</p>
+    <a class="source-button" href="https://shinwa-auction.com/news/20260718/">Read source →</a>
+  </article>
+
+  <hr class="divider">
+
+  <article class="item">
+    <h3>Wright's August sale put a hard number on a documented Nakashima form.</h3>
+    <p>A set of three cherry Nakashima "Amoeba" nesting tables (1961), provenance direct from the artist to a Pittsburgh collector, sold against an estimate of $8,000–10,000 for a result of $20,480 — confirmed via Wright's own terms-of-sale page as hammer plus buyer's premium, not hammer alone.</p>
+    <p>The lot page 403'd on a standard fetch; only a raw curl with a browser user-agent recovered the server-rendered data, a reminder some auction pages need that treatment to verify at all.</p>
+    <a class="source-button" href="https://wright20.com/auctions/2026/08/design/199">Read source →</a>
+  </article>
+
+  <hr class="divider">
+
+  <article class="item">
+    <h3>Kanazawa's gold leaf just got materially more expensive, and the 産地 keeps shrinking.</h3>
+    <p>Tanaka Kikinzoku's own daily retail gold price moved from ¥22,624/g on August 3 to ¥25,571/g on August 21 — roughly 13% in under three weeks, a direct input-cost move for any 金箔 finish being spec'd or quoted right now.</p>
+    <p>Longer view: Ishikawa's gold-leaf cooperative reported about 5.6 million sheets produced last year, a seventh consecutive annual decline and under a tenth of the 1989 peak. Correcting an earlier draft figure: the ¥20,000/g threshold crossed on 2025-09-29 was ¥20,018/g in the morning session, not ¥21,018/g.</p>
+    <a class="source-button" href="https://gold.tanaka.co.jp">Read source →</a>
+  </article>
+
+  <h2 class="section-title">Needs your answer</h2>
+
+  <div class="question">
+    <div class="q-meta">2026-08-23 / verifier</div>
+    <p>AICA's cert-list URL used as a standing reference is stale and actually serves a different product's catalogue; the correct current cert-list PDF has been identified. Adopt it as the standing reference for AICA certification checks going forward?</p>
+  </div>
+
+  <div class="question">
+    <div class="q-meta">2026-08-23 / verifier</div>
+    <p>1 Hotel Tokyo's biophilic CASBEE-rank and plant-count figures were killed this run as mis-sourced — not present on the page cited — but appear to circulate elsewhere in Japanese press. Worth a fresh pass with the correct primary source if the project stays relevant?</p>
+  </div>
+
+  <div class="question">
+    <div class="q-meta">2026-08-23 / verifier</div>
+    <p>A researcher-submitted item on a Lighting Design Award was flagged as needing adjudication of a contradiction across two pages, but no source detail was actually supplied this cycle. Re-submit next cycle if still within the recency window, or was it dropped intentionally?</p>
+  </div>
+
+  <a class="source-button" href="https://github.com/sideri-dev/tessera-research/edit/main/QUESTIONS.md">Answer on GitHub →</a>
+
+  <footer>
+    Tessera — research for spatial design practice.
+  </footer>
+
 </main>
 </body>
 </html>
